@@ -1,3 +1,5 @@
+#ルキちゃんねる参照
+
 #内包表記
 #こんなリストがあったとする
 users = [
@@ -54,4 +56,34 @@ for user in users:
 #ジェネレータ式にすると必要な分だけを確保することができる
 #infinit_genertor = (num for num in range(0,123456789))
 #generator(...)
+'''
+
+'''
+#特定の要素を抜き出す
+#ジェネレータ式の応用で、年齢が25歳の人を1人だけ取得する、いなければNoneを返す
+user = next((user for user in users if user.get('age',0) ==  25),None)
+print(user)
+'''
+
+'''
+#デコレータ
+from functools import wraps
+def logger(separator:str = '-'):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args,**kwargs):
+            #事前処理
+            print(10 * separator)
+            result = func(*args,**kwargs)
+            #事後処理
+            #print(result)
+            print(10 * separator)
+            return result
+        return wrapper
+    return decorator
+
+@logger('-')
+def func():
+    print('デコレータのテスト')
+func()
 '''
