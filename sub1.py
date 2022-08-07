@@ -44,4 +44,14 @@ for user in users:
         print(user)
 '''
 
+'''
 #ジェネレータ
+#無限に近い長さの配列を扱うことになるコード
+
+#infinit_list = [num for num in range(0,123456789)]
+#print(sum(infinit_list))
+
+#ジェネレータ式にすると必要な分だけを確保することができる
+#infinit_genertor = (num for num in range(0,123456789))
+#generator(...)
+'''
