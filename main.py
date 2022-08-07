@@ -5,6 +5,7 @@
 #func = wrapper　となる
 #func1()はwrapper()と同義
 #wrapper()が実行されることによりdef wrapper()が実行されることになる
+#参考サイト・・・いまにゅ
 
 import datetime
 
