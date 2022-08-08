@@ -1,5 +1,4 @@
 #カプセル化
-
 class Data:
     def __init__(self):
         self.nums = [1,2,3,4,5]
